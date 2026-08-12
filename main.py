@@ -42,14 +42,14 @@ def search_by_category():
     for prompt in prompts:
         if prompt["카테고리"] not in categories:
             categories.append(prompt["카테고리"])
-    
+
     print("카테고리 목록:")
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
-    
+
     choice = input("\n카테고리 번호를 입력하세요: ")
     selected = categories[int(choice) - 1]
-    
+
     print(f"\n[{selected}] 카테고리 프롬프트:")
     for i, prompt in enumerate(prompts):
         if prompt["카테고리"] == selected:
