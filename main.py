@@ -48,9 +48,10 @@ def show_prompts():
         print("저장된 프롬프트가 없습니다!")
         return
     for i, prompt in enumerate(prompts):
-        print(f"\n[{i+1}] 제목: {prompt['제목']}")
-        print(f"     내용: {prompt['내용']}")
-
+        star = " ⭐" if prompt["즐겨찾기"] else ""
+        print(f"{i+1}. [{prompt['카테고리']}] {prompt['제목']}{star}")
+    print(f"\n총 {len(prompts)}개의 프롬프트")
+    
 def search_by_category():
     print("\n--- 카테고리별 조회 ---")
     categories = []
@@ -68,9 +69,10 @@ def search_by_category():
     print(f"\n[{selected}] 카테고리 프롬프트:")
     for i, prompt in enumerate(prompts):
         if prompt["카테고리"] == selected:
-            print(f"\n[{i+1}] 제목: {prompt['제목']}")
-            print(f"     내용: {prompt['내용']}")
+            print(f"\n[{i+1}. [{prompt['카테고리']}] {prompt['제목']}{star}")
+    print(f"\n총 {len(prompts)}개의 프롬프트") 
 
+                
 def search_prompt():
     print("\n--- 프롬프트 검색 ---")
     keyword = input("검색어를 입력하세요: ")
@@ -110,5 +112,22 @@ def main():
             break
         else:
             print("잘못된 번호예요. 다시 입력해주세요!")
+
+def show_detail():
+    print("\n--- 프롬프트 상세 보기 ---")
+    show_prompts()
+    choice = input("\n번호를 입력하세요: ")
+    if not choice.isdigit() or not (1 <= int(choice) <= len(prompts)):
+        print("잘못된 번호입니다!")
+        return
+    p = prompts[int(choice) - 1]
+    star = "⭐" if p["즐겨찾기"] else "없음"
+    print("─" * 20)
+    print(f"제목: {p['제목']}")
+    print(f"카테고리: {p['카테고리']}")
+    print(f"즐겨찾기: {star}")
+    print("─" * 20)
+    print(f"내용:\n{p['내용']}")
+    
 
 main()
