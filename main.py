@@ -21,6 +21,7 @@ def search_prompt():
     print("\n--- 프롬프트 검색 ---")
     keyword = input("검색어를 입력하세요: ")
     results = []
+
     for prompt in prompts:
         if keyword in prompt["제목"] or keyword in prompt["내용"]:
             results.append(prompt)
