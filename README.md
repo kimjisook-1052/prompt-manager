@@ -52,7 +52,7 @@ GitHub 저장소 URL: https://github.com/kimjisook-1052/prompt-manager
  <img width="557" height="69" alt="image" src="https://github.com/user-attachments/assets/2823a646-aaf4-4acf-afda-d8b66f2c7819" />
 
 
- Git 설정: git config --list (이름/이메일 확인)
+ Git 설정: git config --list
 
  <img width="552" height="310" alt="image" src="https://github.com/user-attachments/assets/2ac8cb85-8ab8-4a08-b20f-862d36a01c3f" />
 
