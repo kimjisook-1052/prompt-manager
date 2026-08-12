@@ -45,7 +45,7 @@ python main.py
 
 GitHub 저장소 URL: https://github.com/kimjisook-1052/prompt-manager
 
-1. 스크린샷 모으기 (이미 대화하면서 다 만드신 화면들이에요, 캡처만 하면 됨)
+1. 스크린샷 모으기
 
  개발 환경: python --version, git --version 결과
 
