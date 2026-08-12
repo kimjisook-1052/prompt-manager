@@ -67,12 +67,14 @@ def search_by_category():
     selected = categories[int(choice) - 1]
 
     print(f"\n[{selected}] 카테고리 프롬프트:")
+    count = 0
     for i, prompt in enumerate(prompts):
         if prompt["카테고리"] == selected:
-            print(f"\n[{i+1}. [{prompt['카테고리']}] {prompt['제목']}{star}")
-    print(f"\n총 {len(prompts)}개의 프롬프트") 
-
-                
+            star = " ⭐" if prompt["즐겨찾기"] else ""
+            print(f"{i+1}. [{prompt['카테고리']}] {prompt['제목']}{star}")
+            count += 1
+    print(f"\n총 {count}개의 프롬프트")
+              
 def search_prompt():
     print("\n--- 프롬프트 검색 ---")
     keyword = input("검색어를 입력하세요: ")
