@@ -96,7 +96,8 @@ def main():
         print("2. 프롬프트 목록 보기")
         print("3. 카테고리별 조회")
         print("4. 프롬프트 검색")
-        print("5. 종료")
+        print("5. 프롬프트 상세 보기")
+        print("6. 종료")
         choice = input("\n번호를 입력하세요: ")
 
         if choice == "1":
@@ -108,6 +109,8 @@ def main():
         elif choice == "4":
             search_prompt()
         elif choice == "5":
+            show_detail()
+        elif choice == "6":
             print("프로그램을 종료합니다!")
             break
         else:
@@ -128,6 +131,6 @@ def show_detail():
     print(f"즐겨찾기: {star}")
     print("─" * 20)
     print(f"내용:\n{p['내용']}")
-    
+
 
 main()
