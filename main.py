@@ -99,7 +99,9 @@ def main():
         print("3. 카테고리별 조회")
         print("4. 프롬프트 검색")
         print("5. 프롬프트 상세 보기")
-        print("6. 종료")
+        print("6. 즐겨찾기 관리")
+        print("7. 즐겨찾기 목록")
+        print("8. 종료")
         choice = input("\n번호를 입력하세요: ")
 
         if choice == "1":
@@ -113,6 +115,10 @@ def main():
         elif choice == "5":
             show_detail()
         elif choice == "6":
+            toggle_favorite()
+        elif choice == "7":
+            show_favorites()
+        elif choice == "8":
             print("프로그램을 종료합니다!")
             break
         else:
@@ -134,5 +140,26 @@ def show_detail():
     print("─" * 20)
     print(f"내용:\n{p['내용']}")
 
+def toggle_favorite():
+    print("\n--- 즐겨찾기 관리 ---")
+    show_prompts()
+    choice = input("\n번호를 입력하세요: ")
+    if not choice.isdigit() or not (1 <= int(choice) <= len(prompts)):
+        print("잘못된 번호입니다!")
+        return
+    p = prompts[int(choice) - 1]
+    p["즐겨찾기"] = not p["즐겨찾기"]
+    status = "추가" if p["즐겨찾기"] else "해제"
+    print(f"'{p['제목']}' 프롬프트를 즐겨찾기에서 {status}했습니다!")
 
+def show_favorites():
+    print("\n--- 즐겨찾기 목록 ---")
+    favs = [p for p in prompts if p["즐겨찾기"]]
+    if len(favs) == 0:
+        print("즐겨찾기한 프롬프트가 없습니다!")
+        return
+    for i, p in enumerate(favs):
+        print(f"{i+1}. [{p['카테고리']}] {p['제목']} ⭐")
+    print(f"\n총 {len(favs)}개의 즐겨찾기")
+    
 main()
