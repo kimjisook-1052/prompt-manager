@@ -64,6 +64,9 @@ def search_by_category():
         print(f"{i+1}. {category}")
 
     choice = input("\n카테고리 번호를 입력하세요: ")
+    if not choice.isdigit() or not (1 <= int(choice) <= len(categories)):
+        print("잘못된 번호입니다!")
+        return
     selected = categories[int(choice) - 1]
 
     print(f"\n[{selected}] 카테고리 프롬프트:")
@@ -161,5 +164,5 @@ def show_favorites():
     for i, p in enumerate(favs):
         print(f"{i+1}. [{p['카테고리']}] {p['제목']} ⭐")
     print(f"\n총 {len(favs)}개의 즐겨찾기")
-    
+
 main()
