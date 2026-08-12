@@ -39,3 +39,8 @@ python main.py
 - Python 3.10 이상
 - VSCode
 - Git / GitHub
+
+## Git 작업 기록
+
+- 기능 단위로 커밋을 나누어 진행했습니다. (총 12개 이상의 커밋)
+- `feature/detail-view`, `feature/favorite-list`, `docs/readme-update` 브랜치를 생성하여 각 기능을 개발한 뒤 `checkout`, `merge`를 통해 `master` 브랜치로 병합했습니다.
