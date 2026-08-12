@@ -103,3 +103,59 @@ def load_prompts():
 ## 중복/충돌 처리 규칙
 
 동일한 제목의 프롬프트가 여러 개 등록되더라도, 프로그램은 이를 별도의 항목으로 각각 저장합니다(제목 중복을 막지 않음). 카테고리가 사용자의 직접 입력으로 새로 생겨도 별도 검증 없이 새 카테고리로 인정합니다. 추후 개선 시 제목 중복 확인 후 사용자에게 덮어쓰기/유지 여부를 묻는 기능을 추가할 수 있습니다.
+
+결과물 스크린샷
+
+python --version, git --version 결과
+
+<img width="473" height="65" alt="image" src="https://github.com/user-attachments/assets/41261f12-940f-49be-9351-435b20d0ee2c" />
+
+ 
+git config --list
+
+<img width="455" height="305" alt="image" src="https://github.com/user-attachments/assets/50ff43f5-9c35-4311-8d07-1a8ac3cfa1d7" />
+
+
+git clone 실행 로그 
+
+<img width="510" height="155" alt="image" src="https://github.com/user-attachments/assets/222762a1-2b79-483f-a23a-15e271ab37b1" />
+
+ 
+메뉴 화면
+
+<img width="448" height="246" alt="image" src="https://github.com/user-attachments/assets/b5353daa-cab4-4ed3-9e93-2d7e2d8d5755" />
+
+ 
+프롬프트 추가 과정
+
+<img width="431" height="226" alt="image" src="https://github.com/user-attachments/assets/f4ba532c-f811-43a0-ace0-dd4b1b88f2e8" />
+
+ 
+목록 보기
+
+<img width="503" height="237" alt="image" src="https://github.com/user-attachments/assets/a817ed2a-134f-4f30-9a5b-18822898a352" />
+
+ 
+카테고리별 조회
+ 
+<img width="438" height="92" alt="image" src="https://github.com/user-attachments/assets/89a1e1dd-1622-4b46-a864-ce73208d60f6" />
+
+
+검색 결과
+ 
+<img width="499" height="137" alt="image" src="https://github.com/user-attachments/assets/17edb515-0e57-4f4f-80ec-369ede3bba9b" />
+
+ 
+상세 보기
+
+<img width="448" height="173" alt="image" src="https://github.com/user-attachments/assets/e36a674e-6b32-40c2-b837-3f5101e9f629" />
+
+
+즐겨찾기 관리/목록
+
+<img width="450" height="90" alt="image" src="https://github.com/user-attachments/assets/99d2ed0f-a432-49df-8854-1b1f8bd2862e" />
+
+
+git log --oneline --graph
+
+<img width="498" height="274" alt="image" src="https://github.com/user-attachments/assets/ca153aa5-4d28-4461-8ea2-1b6a48623ab7" />
