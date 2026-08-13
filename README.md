@@ -83,26 +83,10 @@ prompts = [
   - `docs/readme-update`: README 문서 작업
   - 각 브랜치는 `git checkout -b`로 생성하고, 기능 완성 후 `git checkout master` → `git merge`로 병합했습니다.
 
-## 데이터 영속화 (현재 상태 및 향후 계획)
-
-현재는 프로그램 실행 중에만 데이터가 메모리(리스트)에 유지되며, 종료 시 초기화됩니다(과제 요구사항).
-향후 개선한다면 `json` 모듈을 사용해 `prompts.json` 파일로 저장/불러오기 기능을 추가할 수 있습니다. 예:
-
-```python
-import json
-
-def save_prompts():
-    with open("prompts.json", "w", encoding="utf-8") as f:
-        json.dump(prompts, f, ensure_ascii=False, indent=2)
-
-def load_prompts():
-    with open("prompts.json", "r", encoding="utf-8") as f:
-        return json.load(f)
-```
 
 ## 중복/충돌 처리 규칙
 
-동일한 제목의 프롬프트가 여러 개 등록되더라도, 프로그램은 이를 별도의 항목으로 각각 저장합니다(제목 중복을 막지 않음). 카테고리가 사용자의 직접 입력으로 새로 생겨도 별도 검증 없이 새 카테고리로 인정합니다. 추후 개선 시 제목 중복 확인 후 사용자에게 덮어쓰기/유지 여부를 묻는 기능을 추가할 수 있습니다.
+동일한 제목의 프롬프트가 여러 개 등록되더라도, 프로그램은 이를 별도의 항목으로 각각 저장합니다(제목 중복을 막지 않음). 카테고리가 사용자의 직접 입력으로 새로 생겨도 별도 검증 없이 새 카테고리로 인정합니다.
 
 
 깃허브 저장소 URL
