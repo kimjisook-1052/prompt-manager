@@ -7,8 +7,8 @@ while True:
     menu = input("번호 선택: ")
 
     if menu == '1':
-        t = input("제목: ")
-        c = input("내용: ")
+        t = input("등록할 제목:")
+        c = input("등록할 내용: ")
         prompts.append({"title": t, "content": c})
         print("저장 완료!")
 
@@ -18,11 +18,13 @@ while True:
             print(f"- {p['title']}")
 
     elif menu == '3':
-        search = input("사과 ")
+        search = input("검색할 단어를 입력하세요:")
+        found = False  # <- 이 줄의 앞 간격이 21번 줄과 똑같아야 해요!
+        
         for p in prompts:
-            if search in p['title']: # 제목에 검색어가 있으면 출력
+            if search in p['title']:
                 print(f"결과: {p['title']} / {p['content']}")
-
-    elif menu == '4':
-        print("종료합니다.")
-        break
+                found = True
+        
+        if found == False:
+            print("❌ 검색 결과가 없습니다.")
